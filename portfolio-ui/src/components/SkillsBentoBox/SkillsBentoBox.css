@@ -1,0 +1,121 @@
+.skills-section {
+  position: relative;
+}
+
+.skills-bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(220px, auto);
+  gap: 1.5rem;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, rgba(78, 128, 238, 0.1) 0%, var(--bg-secondary) 100%);
+  border-color: rgba(78, 128, 238, 0.2);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, rgba(182, 52, 217, 0.1) 0%, var(--bg-secondary) 100%);
+  border-color: rgba(182, 52, 217, 0.2);
+}
+
+.skill-header {
+  margin-bottom: 1.5rem;
+}
+
+.skill-icon {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.bg-gradient-primary .skill-icon {
+  color: var(--accent-primary);
+}
+
+.bg-gradient-secondary .skill-icon {
+  color: var(--accent-secondary);
+}
+
+.skill-header h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.skill-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.skill-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+@media (max-width: 992px) {
+  .skills-bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-bento {
+    grid-template-columns: 1fr;
+  }
+  
+  .span-2 {
+    grid-column: span 1;
+  }
+}
